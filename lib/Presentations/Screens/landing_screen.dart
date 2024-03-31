@@ -19,9 +19,22 @@ const List<Widget> bottomNavScreens = [
   Text("Index 4: Profile"),
 ];
 
-class LandingScreen extends StatelessWidget {
+class LandingScreen extends StatefulWidget {
   const LandingScreen({super.key});
 
+  @override
+  State<LandingScreen> createState() => _LandingScreenState();
+}
+
+class _LandingScreenState extends State<LandingScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    // ! Todo some work
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<LandingPageBloc, LandingPageState>(
@@ -46,3 +59,5 @@ class LandingScreen extends StatelessWidget {
     );
   }
 }
+
+
