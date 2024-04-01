@@ -27,14 +27,6 @@ class LandingScreen extends StatefulWidget {
 }
 
 class _LandingScreenState extends State<LandingScreen> {
-
-  @override
-  void initState() {
-    // TODO: implement initState
-
-    // ! Todo some work
-    super.initState();
-  }
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<LandingPageBloc, LandingPageState>(
