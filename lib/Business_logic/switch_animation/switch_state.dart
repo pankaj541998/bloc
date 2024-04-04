@@ -1,9 +1,9 @@
 part of "switch_bloc.dart";
 
 class SwicthState extends Equatable {
-  bool isSwitched;
-  double sliderValue;
-  SwicthState({this.isSwitched = false, this.sliderValue = 0});
+  final bool isSwitched;
+  final double sliderValue;
+  const SwicthState({this.isSwitched = false, this.sliderValue = 0});
   
   @override
   List<Object?> get props => [isSwitched,sliderValue];

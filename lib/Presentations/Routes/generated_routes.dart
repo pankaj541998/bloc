@@ -1,5 +1,4 @@
 import 'package:bnb_bloc/Business_logic/landing_page_bloc/landing_page_bloc.dart';
-import 'package:bnb_bloc/Presentations/Screens/landing_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
