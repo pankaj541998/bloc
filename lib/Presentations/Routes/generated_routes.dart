@@ -3,6 +3,8 @@ import 'package:bnb_bloc/Presentations/Screens/landing_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../Screens/container_opacity_switch.dart';
+
 class RouteGenerator {
   final LandingPageBloc landingPageBloc = LandingPageBloc();
   Route<dynamic> generatedRoutes(RouteSettings settings) {
@@ -12,7 +14,8 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => BlocProvider.value(
             value: landingPageBloc,
-            child: const LandingScreen(),
+            child: const SwicthScreens(),
+            // child: const LandingScreen(),
           ),
         );
       default:
