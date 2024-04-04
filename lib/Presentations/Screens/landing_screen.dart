@@ -1,3 +1,4 @@
+import 'package:bnb_bloc/Business_logic/counter/counter_bloc.dart';
 import 'package:bnb_bloc/Business_logic/landing_page_bloc/landing_page_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,7 +34,30 @@ class _LandingScreenState extends State<LandingScreen> {
       builder: (context, state) {
         return Scaffold(
           body: Center(
-            child: bottomNavScreens.elementAt(state.tabIndex),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                BlocBuilder<CounterBloc, CounterState>(builder: (context, state) {
+                  return Text(state.counter.toString(),style: const TextStyle(fontSize: 34));
+                },),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  ElevatedButton(onPressed: (){
+                    context.read<CounterBloc>().add(IncremnetCouter());
+                  }, child: const Text("Incremnet")),
+                  const SizedBox(width: 20),
+                  ElevatedButton(onPressed: (){
+                     context.read<CounterBloc>().add(DecremnetCouter());
+                  }, child: const Text("Decremnet")),
+                ],)
+                // Center(
+                //   child: bottomNavScreens.elementAt(state.tabIndex),
+                // ),
+              ],
+            ),
           ),
           bottomNavigationBar: BottomNavigationBar(
             items: bottomNavItems,

@@ -5,7 +5,5 @@ sealed class LandingPageEvent {}
 
 class TabChanges extends LandingPageEvent{
   final int tabIndex;
-
   TabChanges({required this.tabIndex});
-
 }
