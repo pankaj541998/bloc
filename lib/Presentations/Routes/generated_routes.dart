@@ -2,7 +2,7 @@ import 'package:bnb_bloc/Business_logic/landing_page_bloc/landing_page_bloc.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../Screens/container_opacity_switch.dart';
+import '../Screens/image_picker.dart';
 
 class RouteGenerator {
   final LandingPageBloc landingPageBloc = LandingPageBloc();
@@ -13,7 +13,8 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => BlocProvider.value(
             value: landingPageBloc,
-            child: const SwicthScreens(),
+            child: const ImagePicker(),
+            // child: const SwicthScreens(),
             // child: const LandingScreen(),
           ),
         );
