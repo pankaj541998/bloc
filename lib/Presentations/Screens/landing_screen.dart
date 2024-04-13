@@ -5,8 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 List<BottomNavigationBarItem> bottomNavItems = const <BottomNavigationBarItem>[
   BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Home"),
-  BottomNavigationBarItem(
-      icon: Icon(Icons.favorite_outline), label: "Favourite"),
+  BottomNavigationBarItem(icon: Icon(Icons.favorite_outline), label: "Favourite"),
   BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
   BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "Cart"),
   BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: "Profile"),
